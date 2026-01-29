@@ -1,9 +1,21 @@
 from datetime import date, datetime
+from enum import Enum
 from uuid import UUID
 
 from pydantic import BaseModel, Field
 
 from app.schemas.weather import UnifiedWeatherResponse
+
+
+class SortField(str, Enum):
+    date = "date"
+    rating = "rating"
+    city = "city"
+
+
+class SortOrder(str, Enum):
+    asc = "asc"
+    desc = "desc"
 
 MAX_TEXT_LENGTH = 500
 MAX_CITY_LENGTH = 50
