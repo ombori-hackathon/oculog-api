@@ -7,7 +7,8 @@ from alembic import context
 
 from app.config import settings
 from app.db import Base
-from app.models import Item  # noqa: F401 - Import models to register with Base
+# Import models to register with Base
+from app.models import User, ConditionLog, WeatherData  # noqa: F401
 
 config = context.config
 
